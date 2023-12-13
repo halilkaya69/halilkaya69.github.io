@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins',sans-serif;
+}
+
+:root{
+    --bg-color:#081b29;
+    --secod-bg-color:#112e42;
+    --text-color:#ededed;
+    --main-color:#00abf0;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color:var(--text-color);
+}
+
+
+
+
+/* New CSS Codes Starts */
+.blog-detail-section {
+    padding: 6rem 9%;
+}
+
+.blog-detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.blog-detail-container img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.blog-detail-container h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.blog-date {
+    font-size: 1.6rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+.blog-detail-container p,
+.blog-detail-container ul {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.back-to-list {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: var(--main-color);
+    text-decoration: none;
+    border-bottom: 2px solid var(--main-color);
+    transition: color 0.3s ease;
+}
+
+.back-to-list:hover {
+    color: var(--secod-bg-color);
+}
+/* New CSS Codes End */

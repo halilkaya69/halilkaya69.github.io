@@ -71,3 +71,64 @@ function animateSection(sectionId) {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+//contact section
+
+
+
+const contactForm = document.querySelector("#contact-form");
+const submitBtn = document.querySelector(".btn");
+const nameInput = document.querySelector("#name");
+const emailInput = document.querySelector("#email"); // Corrected selector for emailInput
+const messageInput = document.querySelector("#message");
+const phoneInput = document.querySelector("#phone");
+
+
+const publicKey = "IOGismlBPkC1QGN4c";
+const serviceID = "service_jpjfnx1";
+const templateID = "template_2ntwzee";
+
+emailjs.init(publicKey);
+
+contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    submitBtn.innerText = "Just a Moment...";
+
+    const inputField = {
+        name: nameInput.value,
+        email: emailInput.value,
+        message: messageInput.value,
+        phone:phoneInput.value
+    };
+
+    emailjs.send(serviceID, templateID, inputField)
+        .then(() => {
+            submitBtn.innerText = "Message sent successfully";
+            messageInput.value = "";
+            emailInput.value = "";
+            phoneInput.value="";
+            nameInput.value="";
+        })
+        .catch((error) => {
+            console.error(error);
+            submitBtn.innerText = "Something went wrong";
+        });
+});
+
+
+
+
+
+

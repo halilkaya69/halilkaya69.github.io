@@ -427,20 +427,24 @@
     <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6019.280994878067!2d28.78411703488769!3d41.0331205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa438a39f52db%3A0xa4eb20ddc406fa96!2s%C4%B0stanbul%20Sabahattin%20Zaim%20%C3%9Cniversitesi!5e0!3m2!1str!2str!4v1701710177464!5m2!1str!2str"  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <!-- width="600" height="450" style="border:0;" allowfullscreen="" </iframe>-->  
       
-        <form action="mailto:69kayahalil@gmail.com.com">
+        <form id="contact-form">
             <h3>get in touch</h3>
             <div class="inputBox">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Full Name"/>
+                <input id="name" type="text" name="name" placeholder="Full Name" required/>
             </div>
     
             <div class="inputBox">
                 <i class="fas fa-envelope"></i>
-                <input type="email" placeholder="example@mail.com"/>
+                <input id="email" type="email" name="email" placeholder="example@mail.com" required/>
+            </div>
+            <div class="inputBox">
+                <i class='bx bx-message-rounded'></i>
+                <input name="message" id="message" placeholder="Your message" required ></textarea>
             </div>
             <div class="inputBox">
                 <i class="fas fa-phone"></i>
-                <input type="number" placeholder="Phone Number"/>
+                <input id="phone" type="number"  name="phone" placeholder="Phone Number" required/>
             </div>
             <input type="submit" class="btn" value="Contact Now" />
           </form>

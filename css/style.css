@@ -1002,6 +1002,39 @@ section:nth-child(odd) .animate.scroll,
     }
 }
 
+@media only screen and (max-width: 767px) {
+    .btn-box {
+        flex-direction: column;  /* Align buttons vertically */
+        height: auto;  /* Auto height */
+        margin-bottom: 1rem; /* Add desired margin */
+    }
+
+    .btn-box .btn {
+        width: 100%; /* Full width */
+        margin-bottom: 1rem; /* Add desired margin */
+    }
+
+    .home-sci {
+        position: static; /* Revert to normal flow */
+        margin-top: 1rem; /* Add desired margin */
+        display: flex;
+        flex-direction: column; /* Align circles vertically */
+    }
+
+    .home-sci a {
+        width: 100%; /* Full width */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 1rem; /* Add desired margin */
+    }
+
+    .home-imgHover {
+        width: 100%; /* Full width */
+    }
+}
+
+
+
+
 @media(max-width:520px){
     html{
         font-size: 50%;

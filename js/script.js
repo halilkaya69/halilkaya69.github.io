@@ -88,7 +88,7 @@ function animateSection(sectionId) {
 
 
 const contactForm = document.querySelector("#contact-form");
-const submitBtn = document.querySelector(".btn");
+const submitBtn = document.querySelector(".btn-submit");/**/
 const nameInput = document.querySelector("#name");
 const emailInput = document.querySelector("#email"); // Corrected selector for emailInput
 const messageInput = document.querySelector("#message");
@@ -104,7 +104,7 @@ emailjs.init(publicKey);
 contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    submitBtn.innerText = "Just a Moment...";
+    submitBtn.value = "Just a Moment...";
 
     const inputField = {
         name: nameInput.value,
@@ -115,7 +115,7 @@ contactForm.addEventListener("submit", (e) => {
 
     emailjs.send(serviceID, templateID, inputField)
         .then(() => {
-            submitBtn.innerText = "Message sent successfully";
+            submitBtn.value = "Message sent successfully"; /**/
             messageInput.value = "";
             emailInput.value = "";
             phoneInput.value="";
@@ -123,7 +123,7 @@ contactForm.addEventListener("submit", (e) => {
         })
         .catch((error) => {
             console.error(error);
-            submitBtn.innerText = "Something went wrong";
+            submitBtn.value = "Something went wrong"; /**/
         });
 });
 

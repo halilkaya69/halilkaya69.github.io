@@ -785,7 +785,7 @@ z-index: 10;
     text-transform: none;
     background-color: transparent;
 }
-.contact .row form .btn{
+.contact .row form .btn-submit{
 
     margin-top: 1rem;
     display:inline-block;
